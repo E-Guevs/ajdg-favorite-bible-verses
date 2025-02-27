@@ -38,9 +38,6 @@ for (let i = 0; i < verseList.length; i++) {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: INITIAL STATES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-// BLUR BUTTON
-// document.getElementById("new-verse").blur();
-
 // INITIAL RANDOM INDEX
 let currentIndex = Math.floor(Math.random() * verseList.length);
 
@@ -51,14 +48,27 @@ const verse = document.getElementById("verse"),
 verse.innerText = verseList[currentIndex].verse;
 book.innerText = verseList[currentIndex].book;
 
+// COLORS FOR NEW VERSE BUTTON
+const newVerseButton = document.getElementById("new-verse-btn"),
+	darkGreen = "rgb(50, 80, 62)",
+	forestGreen = "forestgreen";
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: INITIAL STATES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: FUNCTION TO GENERATE NEW BIBLE VERSE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: FUNCTIONS TO GENERATE NEW BIBLE VERSE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+function highlightNewVerseButton() {
+	// HIGHLIGHT NEW VERSE BUTTON
+	newVerseButton.style.backgroundColor = forestGreen;
+}
 
 function getBibleVerse() {
 	// FADE OUT PREVIOUS BIBLE VERSE
 	verse.style.opacity = 0;
 	book.style.opacity = 0;
+
+	// RESET COLOR OF NEW VERSE BUTTON
+	newVerseButton.style.backgroundColor = darkGreen;
 
 	// FIRE FUNCTION AFTER 500ms DELAY
 	setTimeout(() => {
@@ -84,30 +94,16 @@ function getBibleVerse() {
 	}, 500);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: FUNCTION TO GENERATE NEW BIBLE VERSE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: FUNCTIONS TO GENERATE NEW BIBLE VERSE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: MISCELLANEOUS TOUCH FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-let initialTouchY;
 
 document.addEventListener(
 	"touchstart",
 	(e) => {
 		e.preventDefault();
-		// initialTouchY = e.changedTouches[0].clientY;
 	},
 	{ passive: false }
 );
-
-// document.addEventListener(
-// 	"touchmove",
-// 	(e) => {
-// 		let updatedTouchY = e.changedTouches[0].clientY;
-// 		let scrollDistance = initialTouchY - updatedTouchY;
-// 		window.scrollBy(0, scrollDistance);
-// 		initialTouchY = updatedTouchY;
-// 	},
-// 	{ passive: false }
-// );
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: MISCELLANEOUS TOUCH FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

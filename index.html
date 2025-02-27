@@ -15,7 +15,10 @@
 				<p id="verse"></p>
 				<p id="book"></p>
 				<div id="button-container">
-					<button id="new-verse" onpointerup="{getBibleVerse()}">
+					<button
+						id="new-verse-btn"
+						onpointerdown="{highlightNewVerseButton()}"
+						onpointerup="{getBibleVerse()}">
 						<i class="fa-solid fa-rotate"></i> Get new Bible verse
 					</button>
 				</div>
