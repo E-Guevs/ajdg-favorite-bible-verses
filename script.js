@@ -38,6 +38,9 @@ for (let i = 0; i < verseList.length; i++) {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: INITIAL STATES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+// BLUR BUTTON
+// document.getElementById("new-verse").blur();
+
 // INITIAL RANDOM INDEX
 let currentIndex = Math.floor(Math.random() * verseList.length);
 
@@ -91,7 +94,7 @@ document.addEventListener(
 	"touchstart",
 	(e) => {
 		e.preventDefault();
-		initialTouchY = e.changedTouches[0].clientY;
+		// initialTouchY = e.changedTouches[0].clientY;
 	},
 	{ passive: false }
 );
