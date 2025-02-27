@@ -46,7 +46,7 @@ const verse = document.getElementById("verse"),
 	book = document.getElementById("book");
 
 verse.innerText = verseList[currentIndex].verse;
-book.innerText = verseList[currentIndex].book;
+book.innerText = `− ${verseList[currentIndex].book}`;
 
 // COLORS FOR NEW VERSE BUTTON
 const newVerseButton = document.getElementById("new-verse-btn"),
@@ -87,7 +87,7 @@ function getBibleVerse() {
 
 		// FADE IN NEW BIBLE VERSE
 		verse.innerText = verseListToBeUsed[currentIndex].verse;
-		book.innerText = verseListToBeUsed[currentIndex].book;
+		book.innerText = `− ${verseListToBeUsed[currentIndex].book}`;
 
 		verse.style.opacity = 1;
 		book.style.opacity = 1;
