@@ -82,3 +82,29 @@ function getBibleVerse() {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: FUNCTION TO GENERATE NEW BIBLE VERSE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: MISCELLANEOUS TOUCH FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+let initialTouchY;
+
+document.addEventListener(
+	"touchstart",
+	(e) => {
+		e.preventDefault();
+		initialTouchY = e.changedTouches[0].clientY;
+	},
+	{ passive: false }
+);
+
+document.addEventListener(
+	"touchmove",
+	(e) => {
+		let updatedTouchY = e.changedTouches[0].clientY;
+		let scrollDistance = initialTouchY - updatedTouchY;
+		window.scrollBy(0, scrollDistance);
+		initialTouchY = updatedTouchY;
+	},
+	{ passive: false }
+);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: MISCELLANEOUS TOUCH FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
