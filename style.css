@@ -111,12 +111,12 @@ h1 {
 
 @media (orientation: portrait) {
 	body::before {
-		background-image: url(./assets/Park\ Portrait.png);
+		background-image: url(assets/Park\ Portrait.png);
 	}
 }
 
 @media (orientation: landscape) {
 	body::before {
-		background-image: url(./assets/Park\ Landscape.png);
+		background-image: url(assets/Park\ Landscape.png);
 	}
 }
