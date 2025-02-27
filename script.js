@@ -59,7 +59,7 @@ const newVerseButton = document.getElementById("new-verse-btn"),
 
 function highlightNewVerseButton() {
 	// HIGHLIGHT NEW VERSE BUTTON
-	newVerseButton.style.backgroundColor = forestGreen;
+	newVerseButton.style.background = forestGreen;
 }
 
 function getBibleVerse() {
@@ -68,7 +68,7 @@ function getBibleVerse() {
 	book.style.opacity = 0;
 
 	// RESET COLOR OF NEW VERSE BUTTON
-	newVerseButton.style.backgroundColor = darkGreen;
+	newVerseButton.style.background = darkGreen;
 
 	// FIRE FUNCTION AFTER 500ms DELAY
 	setTimeout(() => {
