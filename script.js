@@ -96,15 +96,15 @@ document.addEventListener(
 	{ passive: false }
 );
 
-document.addEventListener(
-	"touchmove",
-	(e) => {
-		let updatedTouchY = e.changedTouches[0].clientY;
-		let scrollDistance = initialTouchY - updatedTouchY;
-		window.scrollBy(0, scrollDistance);
-		initialTouchY = updatedTouchY;
-	},
-	{ passive: false }
-);
+// document.addEventListener(
+// 	"touchmove",
+// 	(e) => {
+// 		let updatedTouchY = e.changedTouches[0].clientY;
+// 		let scrollDistance = initialTouchY - updatedTouchY;
+// 		window.scrollBy(0, scrollDistance);
+// 		initialTouchY = updatedTouchY;
+// 	},
+// 	{ passive: false }
+// );
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END: MISCELLANEOUS TOUCH FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
