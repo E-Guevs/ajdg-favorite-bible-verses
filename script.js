@@ -26,6 +26,10 @@ const verseList = [
 		verse: `"Do not be afraid, for I am with you. Do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand."`,
 		book: `Isaiah 41:10`,
 	},
+	{
+		verse: `For who has shown contempt for the day of small things? But these seven will rejoice when they see the plumb line in the hand of Zerubbabel—they are the eyes of the Lord roaming throughout the earth.`,
+		book: `Zechariah 4:10`,
+	},
 ];
 
 // BIBLE VERSE LIST TO BE USED
@@ -98,7 +102,7 @@ function getBibleVerse() {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~START: MISCELLANEOUS TOUCH FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-document.addEventListener(
+newVerseButton.addEventListener(
 	"touchstart",
 	(e) => {
 		e.preventDefault();
