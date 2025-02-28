@@ -27,7 +27,7 @@ const verseList = [
 		book: `Isaiah 41:10`,
 	},
 	{
-		verse: `For who has shown contempt for the day of small things? But these seven will rejoice when they see the plumb line in the hand of Zerubbabel—they are the eyes of the Lord roaming throughout the earth.`,
+		verse: `Do not despise these small beginnings, for the Lord rejoices to see the work begin, to see the plumb line in Zerubbabel's hand.`,
 		book: `Zechariah 4:10`,
 	},
 ];
